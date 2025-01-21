@@ -12,7 +12,7 @@ import { SearchmovieService } from '../services/searchmovie/searchmovie.componen
 })
 export class SearchformComponent implements OnInit {
   searchForm: FormGroup;
-  searchResults: any = null;
+  searchResults: { [key: string]: any } | null = null;
 
   constructor(private SearchmovieService: SearchmovieService, private fb: FormBuilder) {
     this.searchForm = this.fb.group({
